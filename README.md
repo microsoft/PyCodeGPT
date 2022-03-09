@@ -3,7 +3,7 @@ A pre-trained GPT model for Python code completion and generation
 
 ## What is it?
 
-PyCode is efficient and effective GPT-Neo-based model for python code generation task, which is similar to [OpenAI Codex](https://openai.com/blog/openai-codex/), [Github Copliot](https://copilot.github.com/), [CodeParrot](https://huggingface.co/blog/codeparrot), [AlphaCode](https://deepmind.com/blog/article/Competitive-programming-with-AlphaCode).
+PyCodeGPT is efficient and effective GPT-Neo-based model for python code generation task, which is similar to [OpenAI Codex](https://openai.com/blog/openai-codex/), [Github Copliot](https://copilot.github.com/), [CodeParrot](https://huggingface.co/blog/codeparrot), [AlphaCode](https://deepmind.com/blog/article/Competitive-programming-with-AlphaCode).
 
 ## Training Data
 Due to the small size of public released dataset, we proposed to collect data from GitHub from scratch. We first crawled 1.2M python-related repositories hosted by GitHub. Then, we used these repository URLs to download all contents of each repository from GitHub. After that, we got 60M raw python files under 1MB with a total size of 330GB. Finally, we carefully designed various strategies of data cleaning to get about 96GB data for training. Please refer to the following table for the details.
@@ -12,14 +12,14 @@ Due to the small size of public released dataset, we proposed to collect data fr
 |:------:|:---:|:---:|:---:|
 | CodeParrot | 0.56M | 54GB, 18.4M | 12GB, 5.4M |
 | Codex | 54M | 179GB | 159GB |
-| PyCode | 1.2M | 330GB, 60M | 96GB, 13M |
+| PyCodeGPT | 1.2M | 330GB, 60M | 96GB, 13M |
 
 
 ## Pretrained models
 
 we aims to train median-large pre-trained models (model size from 110M to 2.7B) based on GPT-Neo:
-- PyCode-110M: derived from GPT-Neo 125M with a vocabulary size of 32K.
-- PyCode-1.3B: coming soon.
+- PyCodeGPT-110M: derived from GPT-Neo 125M with a vocabulary size of 32K. [Download PyCodeGPT 110M](https://github.com/microsoft/PyCodeGPT/releases/tag/PyCodeGPT-110M).
+- PyCodeGPT-1.3B: coming soon. We will release our model to [huggingface](https://huggingface.co/models) later.
 
 ## Evaluation
 1. Install requirements (python 3.7)
@@ -36,7 +36,7 @@ $ pip install -e human-eval
 
 3. Run `eval_human_eval.py` to generate programs
     - Arguments
-        - `model_name_or_path` : Path to the model checkpoint to be evaluated. We will release our model to [huggingface](https://huggingface.co/models) later.
+        - `model_name_or_path` : Path to the model checkpoint to be evaluated. 
         - `output_dir` : Path to save generated programs
         - `num_completions` : The number of program to be generated
         - `temperature` : Temperature for sampling
@@ -46,7 +46,7 @@ $ pip install -e human-eval
         
         ```bash
         $ python eval_human_eval.py \
-        	--model_name_or_path PyCode-110M/ \
+        	--model_name_or_path PyCodeGPT-110M/ \
         	--output_dir results/ \
         	--num_completions 100 \
         	--temperature 0.2 \
@@ -66,7 +66,7 @@ Here's our evaluation result on HumanEval dataset:
 
 |Model|Pass@1|Pass@10|Pass@100|
 |:------:|:---:|:---:|:---:|
-|PyCode-110M                                |8.32%  |13.53% |18.3%  |
+|PyCodeGPT-110M                             |8.32%  |13.53% |18.3%  |
 |||||
 |GPT-Neo 125M                               |0.75%  |1.88%  |2.97%  |
 |GPT-Neo 1.3B                               |4.97%  |7.47%  |16.3%  |
