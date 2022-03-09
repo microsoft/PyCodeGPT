@@ -96,3 +96,8 @@ Here's our evaluation result on HumanEval dataset:
 |Pretrained Decoder-only 1.1B (AlphaCode)   |17.1%  |28.2%  |45.3%  |
 
 As you can see, our PyCode 110M model is comparable with Codex 85M.
+=======
+
+## Reference
+If you want to use the models, you need to cite our following paper:
+
