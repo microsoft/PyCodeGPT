@@ -94,6 +94,10 @@ Here's our evaluation result on HumanEval dataset:
 |Pretrained Decoder-only 302M (AlphaCode)   |11.6%  |18.8%  |31.8%  |
 |Pretrained Decoder-only 685M (AlphaCode)   |14.2%  |24.4%  |38.8%  |
 |Pretrained Decoder-only 1.1B (AlphaCode)   |17.1%  |28.2%  |45.3%  |
+|||||
+|PolyCoder 160M                             |2.13%  |3.35%  |4.88%  |
+|PolyCoder 400M                             |2.96%  |5.29%  |11.59% |
+|PolyCoder 2.7B                             |5.59%  |9.84%  |17.68% |
 
 As you can see, our PyCode 110M model is comparable with Codex 85M.
 =======
