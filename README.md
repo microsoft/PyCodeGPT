@@ -19,7 +19,7 @@ Due to the small size of public released dataset, we proposed to collect data fr
 
 we aims to train median-large pre-trained models (model size from 110M to 2.7B) based on GPT-Neo:
 - PyCodeGPT-110M: derived from GPT-Neo 125M with a vocabulary size of 32K. [Download PyCodeGPT 110M](https://github.com/microsoft/PyCodeGPT/releases/tag/PyCodeGPT-110M).
-- PyCodeGPT-1.3B: coming soon. We will release our model to [huggingface](https://huggingface.co/models) later.
+- PyCodeGPT-1.3B: coming soon.
 
 ## Evaluation
 1. Install requirements (python 3.7)
