@@ -64,9 +64,11 @@ $ pip install -e human-eval
 
 Here's our evaluation result on HumanEval dataset:
 
+Note: our model can have a comparable accuracy with Codex of similar model size.
+
 |Model|Pass@1|Pass@10|Pass@100|
 |:------:|:---:|:---:|:---:|
-|PyCodeGPT-110M                             |8.32%  |13.53% |18.3%  |
+|PyCodeGPT-110M                             |**8.32%**  |**13.53%** |**18.3%**  |
 |||||
 |GPT-Neo 125M                               |0.75%  |1.88%  |2.97%  |
 |GPT-Neo 1.3B                               |4.97%  |7.47%  |16.3%  |
@@ -99,7 +101,6 @@ Here's our evaluation result on HumanEval dataset:
 |PolyCoder 400M                             |2.96%  |5.29%  |11.59% |
 |PolyCoder 2.7B                             |5.59%  |9.84%  |17.68% |
 
-As you can see, our PyCode 110M model is comparable with Codex 85M.
 =======
 
 ## Reference
