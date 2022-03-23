@@ -9,7 +9,7 @@ PyCodeGPT is efficient and effective GPT-Neo-based model for python code generat
 Due to the small size of public released dataset, we proposed to collect data from GitHub from scratch. We first crawled 1.2M python-related repositories hosted by GitHub. Then, we used these repository URLs to download all contents of each repository from GitHub. After that, we got 60M raw python files under 1MB with a total size of 330GB. Finally, we carefully designed various strategies of data cleaning to get about 96GB data for training. Please refer to the following table for the details.
 
 |Model|Repositories|Size and file after filtering|
-|:------:|:---:|:---:|:---:|
+|:------:|:---:|:---:|
 | CodeParrot | 0.56M | 12GB (compressed), 5.4M |
 | Codex | 54M | 159GB |
 | PyCodeGPT | 1.2M | 96GB, 13M |
