@@ -1,0 +1,16 @@
+transformers==4.12.5
+sentencepiece
+protobuf
+wandb
+datasets
+numpy
+cython
+fairseq
+autopep8
+docformatter
+zstandard
+beautifulsoup4
+lxml
+ipdb
+redbaron
+func-timeout
