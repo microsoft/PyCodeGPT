@@ -12,7 +12,7 @@ from transformers.pipelines.base import Pipeline
 from tqdm import tqdm
 import ipdb
 
-from human_eval.data import write_jsonl, read_problems
+from pandas_numpy_eval.data import write_jsonl, read_problems
 
 device = torch.device('cpu') if not torch.cuda.is_available() else torch.device('cuda')
 torch.set_num_threads(16)
@@ -207,8 +207,8 @@ if __name__ == '__main__':
     parser.add_argument('-p', '--top_p', type=float, default=0.95)
     parser.add_argument('-l', '--max_new_tokens', type=int, default=100)
     parser.add_argument('-gpu', "--gpu_device", type=int, default=0)
-    parser.add_argument('-d', '--domain', type=str, default="Pandas", choices=["Pandas", "Numpy", "NLTK"])
-    parser.add_argument('-mv', '--model_version', type=str, default="CERT", choices=["PYCODEGPT", "PYCODEGPT_XL", "CERT"])
+    parser.add_argument('-d', '--domain', type=str, default="Pandas", choices=["Pandas", "Numpy"])
+    parser.add_argument('-mv', '--model_version', type=str, default="CERT", choices=["PYCODEGPT", "CERT"])
 
     args = parser.parse_args()
 

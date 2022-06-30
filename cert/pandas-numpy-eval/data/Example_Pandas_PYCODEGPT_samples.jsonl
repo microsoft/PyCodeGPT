@@ -1,0 +1,101 @@
+{"task_id": "PandasEval/0", "completion": " df.dropna(axis=1, subset=col_name)"}
+{"task_id": "PandasEval/1", "completion": "\ndf=pd.read_csv(\"datas_yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"]=df.Education_Embarked_Relevancy_Income_Score.apply(str.strip)\ndf.replace(\" \",np.nan,\"x\",inplace=True)"}
+{"task_id": "PandasEval/2", "completion": " ['A', 'B', 'C']\ndata.to_csv('test.csv',header=False)"}
+{"task_id": "PandasEval/3", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].astype(int)\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].fillna(0)\ndf[\"total_labor_maint_per_year\"] = df[\"labor_made\"] - df[\"labor_made_total\"]\ndf = df.apply"}
+{"task_id": "PandasEval/4", "completion": "\ndf = pd.read_csv(\"datasite.csv\")\nheaders = df.columns.tolist()\ndf = df[headers]\n\ndata_frame = df.sample(1000)"}
+{"task_id": "PandasEval/5", "completion": " # 1st column and third column = TEN, TWO, etc\n    new_df = pd.DataFrame(data=data['1st_column'],\n                            columns=data['third_column'].unique(),\n                            dtype=str)\n    return new_df"}
+{"task_id": "PandasEval/6", "completion": " ['col1', 'col2']"}
+{"task_id": "PandasEval/7", "completion": " df.date.apply(lambda x: pd.to_datetime(x, errors='coerce'))"}
+{"task_id": "PandasEval/8", "completion": " df.loc[2:len(df), 2]"}
+{"task_id": "PandasEval/9", "completion": "#    x = df[0]"}
+{"task_id": "PandasEval/10", "completion": " df.groupby('Sp', as_index=False).max()"}
+{"task_id": "PandasEval/11", "completion": "#    x[0]  = [value, value,...]\n    # Return all rows that have the given column name\n    x = df.loc[:, col_name].values.tolist()\n    # For a column named `col_name`, drop the rest of the column.\n    # Return rows with the given column value.\n    for row_idx, value in enumerate(x):\n        if value in values:\n            x.pop(row_idx)\n    return x"}
+{"task_id": "PandasEval/12", "completion": ""}
+{"task_id": "PandasEval/13", "completion": "def extract_floats(df):\n    # Extraction of data from DataFrame\n    # Return: DataFrame\n    cols = pd.read_csv(\"https://raw.githubusercontent.com/username/\" \\\n                       \"pl-proto/experiment-data/master/train/\" \\\n                       \"web/train/web/all.csv\")\n    for col_name in col_names:\n        df = df.loc[:, col_name]\n    return df"}
+{"task_id": "PandasEval/14", "completion": "\ndf = pd.read_csv('datas/yr_Bacteria.csv')\ndf = df[df['Value'].iat[0] > df['Value'].iat[2]]\ndf = df[df['Value'].iat[2] > df['Value'].iat[1]]\ndf = df[df['ID'].iat[0] > df['ID'].iat[2]]\ndf = df[df['ID']."}
+{"task_id": "PandasEval/15", "completion": " # 1. Is the value NaN?\n    # 2. Is the minimum/maximum of the value?\n    # 3. Is the minimum/maximum of the value or minimum is the minimum?\n    # 4. Is the maximum or minimum of the value?\n    if not isinstance(df, pd.core.frame.DataFrame) or not isinstance(df.values, pd.core.frame.DataFrame):\n        return True\n    if df.values.dtype.name not in ['float64"}
+{"task_id": "PandasEval/16", "completion": "#     # Add a new column and update a dataframe data"}
+{"task_id": "PandasEval/17", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].cumsum()\n\ndf_plants = df[df[\"division\"] == 'PLANTS']\ndf_practical_levels = df[df[\"division\"] == 'PRACTICAL_LEVELS']\ndf_groups = df[df[\"division\"] == 'COMPANY_GROUPS']"}
+{"task_id": "PandasEval/18", "completion": "#    x = df[column_name].value_counts()\n    x = pd.Series(df[column_name], index=df.index, name=column_name)\n    return x.sort_index()"}
+{"task_id": "PandasEval/19", "completion": " df_new= pd.DataFrame(df_original.copy())\n    # exclude all existing rows\n    df_new[df_new.shape[0]] = df_original.iloc[:,0]\n    return df_new"}
+{"task_id": "PandasEval/20", "completion": " df.T.count()\ncount_series_dict = dict(zip(df.columns, count_series))"}
+{"task_id": "PandasEval/21", "completion": " df.dropna(axis=1)"}
+{"task_id": "PandasEval/22", "completion": " df_norm = pd.DataFrame(df.iloc[:,-1,-1])\n    df_norm = df_norm.subtract(df.iloc[:,0,-1], axis = 0)\n    df_norm = df_norm.div(df.iloc[:,0,-1])\n    return df_norm.iloc[:,0:-1,0:1]"}
+{"task_id": "PandasEval/23", "completion": "\ndf=pd.read_csv(\"datas_yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"]=df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df."}
+{"task_id": "PandasEval/24", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_biopsy_in_k\"] = df[\"total_biopsy_in_k\"] + df[\"total_arsenic_in_k\"]\nround_a_single_column(df)"}
+{"task_id": "PandasEval/25", "completion": " df.sort_values(['date'], ascending=False)"}
+{"task_id": "PandasEval/26", "completion": " # 1st column and third column = [value, gen_state, state, yield]\n     # 2nd column and third column = [value, gen_state, state, yield]\n     # 4th column and third column = [value, gen_state, state, yield]\n     # 4th column and third column = [value, gen_state, state, yield]\n    return df.loc[:, ['gdp', 'gen_state','state', 'yield']]"}
+{"task_id": "PandasEval/27", "completion": " df.loc[0:2, [0, 1]].count()"}
+{"task_id": "PandasEval/28", "completion": "#     if not df.exists():"}
+{"task_id": "PandasEval/29", "completion": " df.sort_values(['A', 'C'], ascending=False).iloc[1:]\ndf = pd.DataFrame({'A': [np.nan, np.nan], 'B': [np.nan, np.nan], 'C': [np.nan, np.nan]})"}
+{"task_id": "PandasEval/30", "completion": "df.Email.apply(lambda x: emails.index(x))"}
+{"task_id": "PandasEval/31", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"]=df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df.div(df."}
+{"task_id": "PandasEval/32", "completion": " pd.Series(list(range(56,24)))"}
+{"task_id": "PandasEval/33", "completion": "#    df.head()\n    df = df.sort_values(by=\"shape\", ascending=False).reset_index(drop=True)\n    return df[df.shape[0] - n:].sort_values(by=\"index\").reset_index(drop=True)"}
+{"task_id": "PandasEval/34", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].astype(int)\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].astype(int)\ndf[\"total_plama_per_year\"] = df[\"plama_made\"].astype(int)\ndf[\"total_evac_per_"}
+{"task_id": "PandasEval/35", "completion": "#    df.drop_duplicates('humidity',keep='last',inplace=True)\n    #df.rename(columns={'% Temperature (%)': 'f',% Humidity (%)': 'h'}, inplace=True)\n    return df"}
+{"task_id": "PandasEval/36", "completion": " df.T.to_string(index=False)"}
+{"task_id": "PandasEval/37", "completion": " df.loc[df['col_0']=='a','col_1']"}
+{"task_id": "PandasEval/38", "completion": "#    df[new_names] = df[origin_names].copy()"}
+{"task_id": "PandasEval/39", "completion": "# 1. Converts and does something with str of first column data"}
+{"task_id": "PandasEval/40", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_in_column\"]=1\ndf.head()\n\nfor i in range(len(df)):\n    if (df[\"1\"]==0 and df[\"2\"]!=0):\n        df.loc[i, col_name]=df.loc[i, col_name]+ df.loc[i, \"2\"]-df.loc[i, \""}
+{"task_id": "PandasEval/41", "completion": "#    x,y,z = [value,value,value]\n    #print(y,series.index)\n    #print(x,series.index)\n    if series.dtype == object:\n        if not series.value_counts().index.values.startswith(value).any():\n            return False\n        if not pd.Series(series).isin([x.strip() for x in series.index.values]):\n            return False\n    elif isinstance(series,pd."}
+{"task_id": "PandasEval/42", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_per_year\"].astype(int)\ndf[\"total_lab_per_year\"] = df[\"lab_per_year\"].astype(int)\ndf[\"labor_per_year\"] = df[\"labor_per_year\"] - df[\"total_labor_per_year\"]\n\ndel_"}
+{"task_id": "PandasEval/43", "completion": "def compute_mean_along_columns(df, columns_list):\n    # You can specify a new column named `mean_along_columns` that contains the mean of each column. You also need to compute the mean along the columns, so use axis=1.\n    # Finally, return the dataframe with the new column.\n    # Return the dataframe with the new column.  So return the result of above.\n    new_cols = [c for c in columns_list if"}
+{"task_id": "PandasEval/44", "completion": "def sort_df(df):\n    # Sort a dataframe by the most common value in every column\n    cols = df[df['value']==df['column']].drop_duplicates().columns\n    columns = df[df[cols[1]]].index.values\n\n    # Sort the DataFrame\n    df.loc[:,cols] = df.loc[:,cols].sort_values(df['column'],ascending=True)\n    df['column'] = df['column'].str.lower().apply("}
+{"task_id": "PandasEval/45", "completion": " s1.intersection(s2)"}
+{"task_id": "PandasEval/46", "completion": "#    x1=df.X[3, :]+1\n    # x2=df.X[4, :]+1\n    # x3=df.X[5, :]+1\n    # x4=df.X[6, :]+1\n    df = pd.read_csv('../data/values_during_ma.csv',\n                        usecols=[0], index_col='Date')\n    df.drop_duplicates('Date', inplace=True)"}
+{"task_id": "PandasEval/47", "completion": "#    data.columns = pd.Series(data.columns).str.lower()\n\n    #A simple regex code for identifying column headers\n    import re\n    @re.compile(r\"^\\W\", flags=re.UNICODE)\n    def upper_regex_pattern(val):\n        # val = re.sub(r\"([A-Z])\",r\"\\1\\2\", val)\n        # strip the first char in case it does not match the regex\n        return val."}
+{"task_id": "PandasEval/48", "completion": " df.loc[df['col'].isin(targets)]"}
+{"task_id": "PandasEval/49", "completion": " df.values.ravel()"}
+{"task_id": "PandasEval/50", "completion": "# The x column and y column must be of a length of 2.\ndf = df.assign(x=[1, 2])"}
+{"task_id": "PandasEval/51", "completion": "df.loc[2, 'Fruit Total'] = sum([np.nan, 2, 1])"}
+{"task_id": "PandasEval/52", "completion": "# 1.1 Add -1 to index of first column"}
+{"task_id": "PandasEval/53", "completion": "#    x,y,columns = [value for name, value in df.iterrows()]\n    columns = [value for name, value in df.iteritems()]\n    return len(columns)"}
+{"task_id": "PandasEval/54", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"]=df.div(df[column_name].astype(str).str.count(\"Year\"))\ndf.iloc[-2].index = pd.to_datetime(df[\"Year\"])\ndf.iloc[-2].columns = [\"age\"]"}
+{"task_id": "PandasEval/55", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_consecutive_positive_values\"]=pd.to_numeric(df.iloc[0:17])"}
+{"task_id": "PandasEval/56", "completion": " df.nlargest(1).iloc[0]"}
+{"task_id": "PandasEval/57", "completion": "#    df.sort_index(axis=1)"}
+{"task_id": "PandasEval/58", "completion": " df.Name.apply(lambda x : x.replace('Bies', 'This is Bies', regex=True))"}
+{"task_id": "PandasEval/59", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].cumsum()\n\ndf_plants = df[df[\"division\"] == 'Plant'.upper()]\ndf_plants.to_csv(\"datas/Data.csv\")\ndf_combined = df_plants.copy()\n\ndf_combined.replace(\"\", np.nan, inplace"}
+{"task_id": "PandasEval/60", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"Date\"] = pd.to_datetime(df[\"Date\"])\ndf.drop(\"Date\", axis=1, inplace=True)\ndf.to_csv(\"datas/yrsBacteria.csv\", encoding=\"gbk\", index=False)"}
+{"task_id": "PandasEval/61", "completion": "#    df[row_to_insert] = df.loc[df.index.apply(lambda x: False), row_to_insert].to_numpy()\n    df.loc[df.index.apply(lambda x: True), row_to_insert] = pd.Series([False]*len(df.index.values))\n    return df"}
+{"task_id": "PandasEval/62", "completion": "for msra, thu in df['MSRA'].unique():\n    rows_dict[msra] = pd.Series([thu, df['THU'][df['MSRA']==msra]])"}
+{"task_id": "PandasEval/63", "completion": " df1.merge(df2, left_on='a', right_index=True)"}
+{"task_id": "PandasEval/64", "completion": " df.select_dtypes(['float64'])"}
+{"task_id": "PandasEval/65", "completion": " # 1                 2                   3                   4\n    # 0 1                 1                       5                   6\n    # 1 2                   1                           7"}
+{"task_id": "PandasEval/66", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor\"]=df.labor_in.sum()\ndf[\"total_pursu\"]=df.pursu_in.sum()\ndf[\"labor_prob\"]=df.labor_in/df.total_labor\ndf[\"pursu_prob\"]=df.pursu_in/df.total_pursu\ndf[\"total_ev']=df.ev"}
+{"task_id": "PandasEval/67", "completion": "df.sort_values(['age'], inplace=True)"}
+{"task_id": "PandasEval/68", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].cumsum()\n\ndf = df[df[\"total_labor_per_year\"] > 0.5]\n\ndf[\"all_url_queries\"] = df[\"url\"].apply(lambda x: \".git\" in x)\ndf[\"all_followers_listed\"] = df[\"followers_"}
+{"task_id": "PandasEval/69", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].cumsum()\n\ndf_plants = df[df[\"division\"] == 'Plant'.upper()]\ndf_plants.to_csv(\"datas/Data.csv\")\ndf_combined = df_plants.copy()\n\ndf_combined[\"Plant_perc_lab_"}
+{"task_id": "PandasEval/70", "completion": "df.index.name = 'World_'"}
+{"task_id": "PandasEval/71", "completion": " df.sample(n=50)"}
+{"task_id": "PandasEval/72", "completion": " df.T.apply(lambda x: (x.max() - x.min())/x.std())"}
+{"task_id": "PandasEval/73", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].astype(int)\ndf[\"num_lab\"] = df[\"labor_made\"].apply(lambda x: str(x))\ndf[\"total_labor\"] = df[\"labor_made\"].astype(int)\ndf[\"num_lab\"] = df[\"total_labor\"].astype(int)"}
+{"task_id": "PandasEval/74", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].astype(int)\ndf[\"total_labor_per_year\"] = df[\"labor_made\"].fillna(0)\ndf[\"total_labor_per_year\"].fillna(0)\n\ncounts = df.groupby(\"date\").apply(count_occurrences_of_a_value"}
+{"task_id": "PandasEval/75", "completion": " df.loc[df['base'] == np.nan]"}
+{"task_id": "PandasEval/76", "completion": " pd.concat([source_series, target_series])"}
+{"task_id": "PandasEval/77", "completion": "#    x,y = pd.Series(df.loc[col_a,col_b])\n    # Pre-sort row series into df.\n    # x, y = x.sort_values(by=col_a)\n    # Put the row series in df\n    # df = df.sort_values(by=col_a)\n    #df.columns = [col_a, col_b]\n    df = pd.DataFrame.from_dict("}
+{"task_id": "PandasEval/78", "completion": " df.loc[0:2,:]\nvalue_floats = value.values.tolist()\nfor i in range(len(value_floats)):\n    print(value_floats[i])"}
+{"task_id": "PandasEval/79", "completion": "#    df[0:2] = np.NaN"}
+{"task_id": "PandasEval/80", "completion": "def sort(array):\n    # sort an array,\n    # then sort the rows using sorted()\n    # return a sorted array\n    def count(x):\n        return x[1:] - x[:-1]\n    def reorder(x):\n        return x.iloc[2:]\n\n    def comb(n, arr):\n        c = 0\n        for k in range(n,0,-1):\n            arr = arr.dropna()\n            k = k-1\n            for r in arr:"}
+{"task_id": "PandasEval/81", "completion": " df.groupby(df['Country'], as_index=False).sum().reset_index()"}
+{"task_id": "PandasEval/82", "completion": "#     # Add a new column and update df\n    df[column_name_list] = df[column_name_list].apply(pd.to_numeric)\n\n    return df"}
+{"task_id": "PandasEval/83", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_biopsy_in_k\"] = df[\"total_biopsy_in_k\"].apply(lambda x:1 if x=='N' else 0)"}
+{"task_id": "PandasEval/84", "completion": "def extract_floats(df):\n    # The first column of the DataFrame will be the function value\n    # Insert code here to get the count, which is used to match with the count in each DF\n    values = df.to_dict('index').values()\n    for column in values[0]:\n        # Make sure the first column is a numeric value\n        if type(column)!= float:\n            df.loc[df.index, column] = df.loc[df."}
+{"task_id": "PandasEval/85", "completion": "\ndf = pd.read_csv(\"datas/yr_B.csv\")"}
+{"task_id": "PandasEval/86", "completion": " df.T[0:2]"}
+{"task_id": "PandasEval/87", "completion": "\ndf1 = pd.read_csv('data.csv', header=0)\ndf2 = pd.read_csv('data.csv', header=0)\ndf1.head()\ndf2.head()\n\ndf1.to_csv('data.csv', index=False)\ndf2.to_csv('data.csv', index=False)\n\ndf1.count()\ndf2.count()\n\nfor column in df"}
+{"task_id": "PandasEval/88", "completion": " df.sort_values(by = \"a\")[:N]"}
+{"task_id": "PandasEval/89", "completion": "#    df.set_index('humidity', inplace=True)\n    return list(df['A7'])"}
+{"task_id": "PandasEval/90", "completion": " df.index = idx\n    return df"}
+{"task_id": "PandasEval/91", "completion": " pd.DataFrame(a)"}
+{"task_id": "PandasEval/92", "completion": "\ndf = pd.read_csv(\"datas.csv\")\ndf = df[:5]\nget_first_n_rows(df, 5)\ndf.to_csv(\"datas.csv\")"}
+{"task_id": "PandasEval/93", "completion": "\ndf = pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_biopsy_in_k\"] = df[\"total_biopsy_in_k\"] + df[\"total_arsenic_in_k\"]\n\ndf = df[df[\"url\"].apply(lambda url: url.split(\"0x\")[-1])]\ndf = df.rename(columns={0: \"url\",\n                        1:"}
+{"task_id": "PandasEval/94", "completion": "#    df.columns = pd.Series(columns)"}
+{"task_id": "PandasEval/95", "completion": "\ndf=pd.read_csv(\"datas/yr_B_C.csv\")\ndf[\"total_labor\"]=df[\"C\"].sum(axis=1)\ndf.set_index(\"ID\", inplace=True)\ndivide_multiple_cols_by_first_col(df)\ndf[\"C\"] = (df[\"C\"].values*0.85).astype(float)"}
+{"task_id": "PandasEval/96", "completion": " df1.merge(df2,on='company')"}
+{"task_id": "PandasEval/97", "completion": "\ndf=pd.read_csv(\"datas/yr_Bacteria.csv\")\ndf[\"total_biopsy_in_k\"] = df[\"total_biopsy_in_k\"] + df[\"total_k\"]\ndf[\"total_immunic\"] = df[\"total_immunic\"] + df[\"total_k\"]\ndf[\"total_non_immunic\"] = df[\"total_non_immunic\"] +"}
+{"task_id": "PandasEval/98", "completion": "\ndf=pd.read_csv(\"datasite.csv\")\nheaders=df.columns.tolist()"}
+{"task_id": "PandasEval/99", "completion": "# 1.1 and -1.2 of first row are the most numeric rouges"}
+{"task_id": "PandasEval/100", "completion": " pd.concat([x, pd.Series([3, 4], index = pd.MultiIndex.from_product((range(5), list(x.index)))), pd.Series([6, 7], index = pd.MultiIndex.from_product((range(5), list(x.index))), name = 'bar')])"}

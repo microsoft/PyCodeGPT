@@ -7,13 +7,10 @@ BASE_DATA_DIR="Your base data directory"
 
 # [Pandas, Numpy]
 DOMAIN="Pandas"
-
 # [normal, sketcher, generator]
 TYPE="generator"
-
 # [train, valid]
 SPLIT="valid"
-
 # [True, False]
 IS_DEBUG="False"
 
