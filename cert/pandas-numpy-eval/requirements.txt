@@ -1,6 +1,6 @@
 tqdm
 fire
-numpy==1.21.4
+numpy==1.22.0
 pandas==1.3.5
 docformatter
 autopep8
