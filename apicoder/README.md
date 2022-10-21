@@ -1,6 +1,6 @@
 # Private Library Oriented Code Generation
 
-This project is the code, data, benchmarks, and models for our paper titled [When Language Model Meets Private Library](https://arxiv.org/pdf/2206.06888.pdf).
+This project is the code, data, benchmarks, and models for our paper titled *“When Language Model Meets Private Library”*.
 
 ---
 
