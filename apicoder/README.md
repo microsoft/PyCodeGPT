@@ -202,7 +202,7 @@ If you find our work useful, please cite the paper:
 @inproceedings{APICoder,
   title={When Languange Model Meets Private Library},
   author={Zan, Daoguang and Chen, Bei and Lin, Zeqi and Guan, Bei and Wang, Yongji and Lou, Jian-Guang},
-  booktitle={ArXiv},
+  booktitle={EMNLP findings},
   year={2022}
 }
 ```
