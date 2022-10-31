@@ -188,12 +188,20 @@ cd data/API-Doc
 unzip API-Doc.zip
 ```
 
-Also, you should download the CodeGenAPI file below, unzip it and put it under path `data/CodeGenAPI`.
+You should download the CodeGenAPI file below, unzip it and put it under path `data/CodeGenAPI`.
 
 > [Click here to download CodeGenAPI-350M-mono](https://github.com/microsoft/PyCodeGPT/releases/download/Private-Library/CodeGenAPI-350M-mono.zip)
 ```
 cd data/CodeGenAPI
 unzip CodeGenAPI-350M-mono.zip
+```
+
+Also, you should download the private API embeddings below, unzip it and put it under path `APIRetriever/data/inference`.
+
+> [Click here to download private API embeddings](https://github.com/microsoft/PyCodeGPT/releases/download/Private-Library/private-api-embeddings.zip)
+```
+cd APIRetriever/data/inference
+unzip private-api-embeddings.zip
 ```
 
 ## Citation
