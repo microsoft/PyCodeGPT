@@ -1,0 +1,1 @@
+Download all embedding files for our benchmarks and put it under this fold.
