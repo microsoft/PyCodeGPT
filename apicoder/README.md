@@ -1,6 +1,6 @@
 # Private Library Oriented Code Generation
 
-This project is the code, data, benchmarks, and models for our paper titled *“When Language Model Meets Private Library”*.
+This project is the code, data, benchmarks, and models for our paper titled [When Language Model Meets Private Library]().
 
 ---
 
@@ -182,7 +182,7 @@ Figure1: Logic flow diagram of our code and data, where the gray background deno
 ## Download
 Download the API-Doc file below, unzip it and put it under path `data/API-Doc`.
 
-> [Click here to download API-Doc](https://drive.google.com/file/d/1hJak_upTdrSHsI0DXeeH_aMBzKXn87AA/view?usp=sharing).
+> [Click here to download API-Doc](https://github.com/microsoft/PyCodeGPT/releases/download/Private-Library/API-Doc.zip).
 ```
 cd data/API-Doc
 unzip API-Doc.zip
@@ -190,7 +190,7 @@ unzip API-Doc.zip
 
 Also, you should download the CodeGenAPI file below, unzip it and put it under path `data/CodeGenAPI`.
 
-> [Click here to download CodeGenAPI-350M-mono](https://drive.google.com/file/d/1Az02eqYM4wTXz758_RxEqnnK5Bv3BUVv/view?usp=sharing)
+> [Click here to download CodeGenAPI-350M-mono](https://github.com/microsoft/PyCodeGPT/releases/download/Private-Library/CodeGenAPI-350M-mono.zip)
 ```
 cd data/CodeGenAPI
 unzip CodeGenAPI-350M-mono.zip
