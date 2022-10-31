@@ -64,7 +64,7 @@ pip install -v --no-cache-dir ./
 
 2、Preparation of pre-trained models
 
-Download the pre-trained checkpoint (e.g., `CodeGenAPI-110M`) from Google Drive and place it in the corresponding folder (e.g., `CodeGenAPI/models/CodeGenAPI-110M`).
+Download the pre-trained checkpoint (e.g., `CodeGenAPI-110M`) from [our released page](https://github.com/microsoft/PyCodeGPT/releases/download/Private-Library/CodeGenAPI-350M-mono.zip) and place it in the corresponding folder (e.g., `CodeGenAPI/models/CodeGenAPI-110M`).
 
 3、Updating the scripts according to your local path
 
@@ -101,7 +101,7 @@ After running these numerous experiments, we drew some plausible observations an
 
 > (1) Prompting API information set is useful on private-library oriented code generation task.
 
-> (2) Which is the best of the API prompt ways including Perfect, Top-$N$, and Human? As a general matter, Perfect, Human, and Top-$N$ produce progressively decreasing benefits. However, Top-$N$ is in occasion superior than Perfect as the noise exists when training the model. Also, we observe that Top-$1$,$2$ usually works better than Top-$3$,$5$ because the latter introduces more noise APIs. 
+> (2) Which is the best of the API prompt ways including Perfect, Top-N, and Human? As a general matter, Perfect, Human, and Top-N produce progressively decreasing benefits. However, Top-N is in occasion superior than Perfect as the noise exists when training the model. Also, we observe that Top-1,2 usually works better than Top-3,5 because the latter introduces more noise APIs. 
 
 > (3) Our continual pre-trained model does better at invoking APIs than to its base model, and thus can further elevate the performance of code generation for private libraries in majority of scenarios.
 
@@ -109,7 +109,7 @@ After running these numerous experiments, we drew some plausible observations an
 
 > (5) Involving human in the loop can further boost the performance.
 
-> (6) As the $k$ in pass@$k$ grows larger, the gain we add API information brings is larger.
+> (6) As the k in pass@k grows larger, the gain we add API information brings is larger.
 
 > (7) It is so challenging to generate code invoking private libraries than public ones, that large models fail to do so if we do not prompt any APIs.
 
