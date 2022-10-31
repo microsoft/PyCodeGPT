@@ -1,0 +1,7 @@
+tqdm
+fire
+numpy==1.21.4
+pandas==1.3.5
+docformatter
+autopep8
+ipdb
