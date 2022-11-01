@@ -1,6 +1,6 @@
 # APICoder - CodeGenAPI
 
-Official repository for our paper ["When Language Model Meets Private Library"]().
+Official repository for our paper ["When Language Model Meets Private Library"](https://arxiv.org/pdf/2210.17236.pdf).
 
 ---
 
