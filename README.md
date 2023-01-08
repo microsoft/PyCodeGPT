@@ -18,7 +18,9 @@ Due to the small size of public released dataset, we proposed to collect data fr
 ## Pretrained models
 
 we aims to train median-large pre-trained models (model size with 110M) based on GPT-Neo:
-- PyCodeGPT-110M: derived from GPT-Neo 125M with a vocabulary size of 32K. [Download PyCodeGPT 110M](https://github.com/microsoft/PyCodeGPT/releases/tag/PyCodeGPT-110M). We also continue-pretrained PyCodeGPT for Libary oriented scenarios, called [CERT](https://github.com/microsoft/PyCodeGPT/tree/main/cert), the models can be downloaded [here](https://github.com/microsoft/PyCodeGPT/releases). 
+- PyCodeGPT-110M: derived from GPT-Neo 125M with a vocabulary size of 32K.
+
+PyCodeGPT-110M is available on [HuggingFace](https://huggingface.co/Daoguang/PyCodeGPT).
 
 ## Evaluation
 1. Install requirements (python 3.7)
@@ -99,8 +101,6 @@ Note: our model can have a comparable accuracy with Codex of similar model size.
 |PolyCoder 160M                             |2.13%  |3.35%  |4.88%  |
 |PolyCoder 400M                             |2.96%  |5.29%  |11.59% |
 |PolyCoder 2.7B                             |5.59%  |9.84%  |17.68% |
-
-=======
 
 ## Reference
 If you want to use the models, you need to cite our following paper:
